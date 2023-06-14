@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.io.file;
 
 public class Graphe {
-    private ArrayList<String>();
-    private ArrayList<ArrayList<String>>();
+    private ArrayList<Arete>() listeAretes;
+    private ArrayList<Sommet>() listeSommets;
 
     public void chargerGraphe(File file) {
 
