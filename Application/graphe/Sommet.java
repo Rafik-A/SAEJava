@@ -1,1 +1,3 @@
 package graphe;
+
+import vue.*;
