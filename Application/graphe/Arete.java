@@ -5,15 +5,17 @@ import vue.*;
 public class Arete {
     // attributs
     private Sommet sommet1;
-    private Sommet sommet2;    
+    private Sommet sommet2;
+    private String nomArete;   
     private int fiabilite;
     private int distance;
     private int duree;
 
     // constructeur
-    public Sommet(Sommet s1, Sommet s2, int fiabilite, int distance, int duree) {
+    public Sommet(Sommet s1, Sommet s2, String nomArete, int fiabilite, int distance, int duree) {
         this.sommet1 = s1;
         this.sommet2 = s2;
+        this.nomArete = nomArete
         this.fiabilite = fiabilite;
         this.distance = distance;
         this.duree = duree;
