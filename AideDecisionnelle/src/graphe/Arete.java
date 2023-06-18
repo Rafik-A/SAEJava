@@ -1,6 +1,6 @@
 package graphe;
 
-import application.vue.*;
+import vue.*;
 
 public class Arete {
     // attributs
