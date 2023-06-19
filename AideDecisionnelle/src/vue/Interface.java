@@ -748,7 +748,7 @@ public class Interface extends javax.swing.JFrame {
         //jTextAreaListe.setText(g..toString());
     }//GEN-LAST:event_jMenuItemVoisinsDirectsActionPerformed
 
-<<<<<<< HEAD
+
     private void jMenuItemModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModifierActionPerformed
         // TODO add your handling code here:
         JFileChooser dossier = new JFileChooser();
@@ -774,7 +774,7 @@ public class Interface extends javax.swing.JFrame {
             }
             }
     }//GEN-LAST:event_jMenuItemModifierActionPerformed
-=======
+
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -796,7 +796,7 @@ public class Interface extends javax.swing.JFrame {
         jDialogFiabilite.setLocationRelativeTo(null);
         jDialogFiabilite.setVisible(true);
     }//GEN-LAST:event_jMenuItemFiabilitéActionPerformed
->>>>>>> 4924503d8d3b4eef148e3d5377b4efc6808b9e4b
+
 
 
     /**
