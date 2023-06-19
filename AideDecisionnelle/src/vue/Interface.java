@@ -4,6 +4,9 @@
  */
 package vue;
 
+import graphe.*;
+import static graphe.Chargement.g;
+
 /**
  *
  * @author rafik
@@ -174,6 +177,11 @@ public class Interface extends javax.swing.JFrame {
         jMenuFichier.setText("Fichier");
 
         jMenuItemOuvrir.setText("Ouvrir");
+        jMenuItemOuvrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemOuvrirActionPerformed(evt);
+            }
+        });
         jMenuFichier.add(jMenuItemOuvrir);
 
         jMenuItemModifier.setText("Modifier");
@@ -218,11 +226,18 @@ public class Interface extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void jMenuItemListeSommetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListeSommetsActionPerformed
         // TODO add your handling code here:
         jDialogListe.setVisible(true);
         jTextAreaListe.setText(getListeSommets());
     }//GEN-LAST:event_jMenuItemListeSommetsActionPerformed
+=======
+    private void jMenuItemOuvrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOuvrirActionPerformed
+        // TODO add your handling code here:
+        Chargement.ouverture();
+    }//GEN-LAST:event_jMenuItemOuvrirActionPerformed
+>>>>>>> 053b7057a17bd06d8cedb0e445e1220f4d59f3f7
 
     /**
      * @param args the command line arguments
