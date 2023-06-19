@@ -6,11 +6,6 @@ package vue;
 
 import graphe.*;
 import static graphe.Chargement.g;
-import java.awt.Desktop;
-import java.io.File;
-import java.io.IOException;
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -91,6 +86,9 @@ public class Interface extends javax.swing.JFrame {
         jScrollPane19 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
         jLabel19 = new javax.swing.JLabel();
+        jDialogCriteres = new javax.swing.JDialog();
+        jLabel20 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -199,12 +197,8 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
-<<<<<<< HEAD
-=======
         jDialogLiens.setTitle("Liens d'un sommet donné");
-        jDialogLiens.setPreferredSize(new java.awt.Dimension(500, 500));
 
->>>>>>> 4924503d8d3b4eef148e3d5377b4efc6808b9e4b
         jLabel5.setText("Sommet à traiter");
 
         jScrollPane5.setViewportView(jList1);
@@ -360,7 +354,6 @@ public class Interface extends javax.swing.JFrame {
         );
 
         jDialogCheminCourt.setTitle("Chemin le plus court entre deux sommets");
-        jDialogCheminCourt.setPreferredSize(new java.awt.Dimension(600, 300));
 
         jScrollPane14.setViewportView(jList7);
 
@@ -434,7 +427,6 @@ public class Interface extends javax.swing.JFrame {
         );
 
         jDialogFiabilite.setTitle("Chemin le plus fiable entre deux sommets");
-        jDialogFiabilite.setPreferredSize(new java.awt.Dimension(600, 300));
 
         jScrollPane17.setViewportView(jList9);
 
@@ -507,10 +499,40 @@ public class Interface extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jDialogCriteres.setTitle("Affichage des sommets selon les critères d'opération");
+
+        jLabel20.setText("Sélectionnez le critère d'opération");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Opératoire", "Maternité", "Nutrition" }));
+
+        javax.swing.GroupLayout jDialogCriteresLayout = new javax.swing.GroupLayout(jDialogCriteres.getContentPane());
+        jDialogCriteres.getContentPane().setLayout(jDialogCriteresLayout);
+        jDialogCriteresLayout.setHorizontalGroup(
+            jDialogCriteresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogCriteresLayout.createSequentialGroup()
+                .addContainerGap(111, Short.MAX_VALUE)
+                .addGroup(jDialogCriteresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogCriteresLayout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)))
+                .addGap(107, 107, 107))
+        );
+        jDialogCriteresLayout.setVerticalGroup(
+            jDialogCriteresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogCriteresLayout.createSequentialGroup()
+                .addGap(57, 57, 57)
+                .addComponent(jLabel20)
+                .addGap(18, 18, 18)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(187, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Interface d'aide à la décision");
         setPreferredSize(new java.awt.Dimension(700, 450));
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(700, 450));
         jPanel1.setLayout(new java.awt.BorderLayout());
 
         jButton1.setText("Ajouter");
@@ -615,11 +637,6 @@ public class Interface extends javax.swing.JFrame {
         jMenuFichier.add(jMenuItemOuvrir);
 
         jMenuItemModifier.setText("Modifier");
-        jMenuItemModifier.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemModifierActionPerformed(evt);
-            }
-        });
         jMenuFichier.add(jMenuItemModifier);
 
         jMenuBarOptions.add(jMenuFichier);
@@ -688,6 +705,11 @@ public class Interface extends javax.swing.JFrame {
         jMenuFiltres.add(jMenuItemFiabilité);
 
         jMenuItemCriteres.setText("Critères");
+        jMenuItemCriteres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCriteresActionPerformed(evt);
+            }
+        });
         jMenuFiltres.add(jMenuItemCriteres);
 
         jMenuBarOptions.add(jMenuFiltres);
@@ -748,33 +770,6 @@ public class Interface extends javax.swing.JFrame {
         //jTextAreaListe.setText(g..toString());
     }//GEN-LAST:event_jMenuItemVoisinsDirectsActionPerformed
 
-
-    private void jMenuItemModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModifierActionPerformed
-        // TODO add your handling code here:
-        JFileChooser dossier = new JFileChooser();
-            
-            dossier.setCurrentDirectory(new File("." + File.separator));
-            FileNameExtensionFilter typeFichier = new FileNameExtensionFilter("Fichiers de type csv","csv");
-            dossier.setFileFilter(typeFichier);
-            
-            int reponse = dossier.showDialog(dossier, "Ouvrir");
-            
-            if(reponse == JFileChooser.APPROVE_OPTION) {
-                File selectedFile = dossier.getSelectedFile();
-                String filePath = selectedFile.getAbsolutePath();
-            
-                // Vérifier si le système de bureau est pris en charge pour ouvrir des fichiers
-                if (Desktop.isDesktopSupported()) {
-                    Desktop bureau = Desktop.getDesktop();
-                    try {
-                        bureau.open(selectedFile);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-            }
-            }
-    }//GEN-LAST:event_jMenuItemModifierActionPerformed
-
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
@@ -797,6 +792,12 @@ public class Interface extends javax.swing.JFrame {
         jDialogFiabilite.setVisible(true);
     }//GEN-LAST:event_jMenuItemFiabilitéActionPerformed
 
+    private void jMenuItemCriteresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCriteresActionPerformed
+        // TODO add your handling code here:
+        jDialogCriteres.setSize(400,300);
+        jDialogCriteres.setVisible(true);
+        jDialogCriteres.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jMenuItemCriteresActionPerformed
 
 
     /**
@@ -843,9 +844,11 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JMenu jDialog;
     private javax.swing.JDialog jDialogAretes;
     private javax.swing.JDialog jDialogCheminCourt;
+    private javax.swing.JDialog jDialogCriteres;
     private javax.swing.JDialog jDialogFiabilite;
     private javax.swing.JDialog jDialogLiens;
     private javax.swing.JDialog jDialogLiensA;
@@ -863,6 +866,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
