@@ -46,7 +46,7 @@ public class Chargement {
                                 }
                                 
                             }
-                            System.out.println(ligne);
+                            //System.out.println(ligne);
                         }
                     }
                 } catch (IOException e) {

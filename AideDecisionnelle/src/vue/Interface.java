@@ -6,6 +6,11 @@ package vue;
 
 import graphe.*;
 import static graphe.Chargement.g;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -158,8 +163,6 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
-
-        jDialogLiens.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jLabel5.setText("Sommet à traiter");
 
@@ -314,7 +317,6 @@ public class Interface extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Interface d'aide à la décision");
         setPreferredSize(new java.awt.Dimension(700, 450));
-        getContentPane().setLayout(new java.awt.BorderLayout());
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -363,7 +365,7 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3)
                             .addComponent(jScrollPane2)
                             .addComponent(jScrollPane1)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -420,6 +422,11 @@ public class Interface extends javax.swing.JFrame {
         jMenuFichier.add(jMenuItemOuvrir);
 
         jMenuItemModifier.setText("Modifier");
+        jMenuItemModifier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemModifierActionPerformed(evt);
+            }
+        });
         jMenuFichier.add(jMenuItemModifier);
 
         jMenuBarOptions.add(jMenuFichier);
@@ -537,6 +544,32 @@ public class Interface extends javax.swing.JFrame {
         jDialogVoisinsD.setLocationRelativeTo(null);
         //jTextAreaListe.setText(g..toString());
     }//GEN-LAST:event_jMenuItemVoisinsDirectsActionPerformed
+
+    private void jMenuItemModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModifierActionPerformed
+        // TODO add your handling code here:
+        JFileChooser dossier = new JFileChooser();
+            
+            dossier.setCurrentDirectory(new File("." + File.separator));
+            FileNameExtensionFilter typeFichier = new FileNameExtensionFilter("Fichiers de type csv","csv");
+            dossier.setFileFilter(typeFichier);
+            
+            int reponse = dossier.showDialog(dossier, "Ouvrir");
+            
+            if(reponse == JFileChooser.APPROVE_OPTION) {
+                File selectedFile = dossier.getSelectedFile();
+                String filePath = selectedFile.getAbsolutePath();
+            
+                // Vérifier si le système de bureau est pris en charge pour ouvrir des fichiers
+                if (Desktop.isDesktopSupported()) {
+                    Desktop bureau = Desktop.getDesktop();
+                    try {
+                        bureau.open(selectedFile);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+            }
+            }
+    }//GEN-LAST:event_jMenuItemModifierActionPerformed
 
 
     /**
