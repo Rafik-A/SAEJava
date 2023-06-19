@@ -32,13 +32,37 @@ public class Interface extends javax.swing.JFrame {
         jDialogListe = new javax.swing.JDialog();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTextAreaListe = new javax.swing.JTextArea();
-        jDialogArretes = new javax.swing.JDialog();
+        jDialogAretes = new javax.swing.JDialog();
         jScrollPane7 = new javax.swing.JScrollPane();
         jTextAreaListe1 = new javax.swing.JTextArea();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jTextPane5 = new javax.swing.JTextPane();
         jDialogLiens = new javax.swing.JDialog();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
+        jButton4 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jDialogLiensA = new javax.swing.JDialog();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList<>();
+        jLabel10 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jDialogVoisinsD = new javax.swing.JDialog();
+        jLabel11 = new javax.swing.JLabel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jList5 = new javax.swing.JList<>();
+        jLabel12 = new javax.swing.JLabel();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jList6 = new javax.swing.JList<>();
+        jButton6 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
@@ -61,11 +85,12 @@ public class Interface extends javax.swing.JFrame {
         jMenuItemOuvrir = new javax.swing.JMenuItem();
         jMenuItemModifier = new javax.swing.JMenuItem();
         jDialog = new javax.swing.JMenu();
-        jMenuItemVoisinsDirects = new javax.swing.JMenuItem();
-        jMenuItemLiensArete = new javax.swing.JMenuItem();
         jMenuItemListeSommets = new javax.swing.JMenuItem();
         jMenuItemListeAretes = new javax.swing.JMenuItem();
         jMenuFiltres = new javax.swing.JMenu();
+        jMenuItemLiensSommet = new javax.swing.JMenuItem();
+        jMenuItemLiensArete = new javax.swing.JMenuItem();
+        jMenuItemVoisinsDirects = new javax.swing.JMenuItem();
         jMenuItemCriteres = new javax.swing.JMenuItem();
         jMenuItemFiabilité = new javax.swing.JMenuItem();
         jMenuItemCheminCourt = new javax.swing.JMenuItem();
@@ -97,54 +122,193 @@ public class Interface extends javax.swing.JFrame {
         jTextAreaListe1.setRows(5);
         jScrollPane7.setViewportView(jTextAreaListe1);
 
-        javax.swing.GroupLayout jDialogArretesLayout = new javax.swing.GroupLayout(jDialogArretes.getContentPane());
-        jDialogArretes.getContentPane().setLayout(jDialogArretesLayout);
-        jDialogArretesLayout.setHorizontalGroup(
-            jDialogArretesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogArretesLayout.createSequentialGroup()
-                .addContainerGap(120, Short.MAX_VALUE)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(150, Short.MAX_VALUE))
+        jLabel7.setText("Tous les liens existants");
+
+        jLabel8.setText("Total");
+
+        jScrollPane9.setViewportView(jTextPane5);
+
+        javax.swing.GroupLayout jDialogAretesLayout = new javax.swing.GroupLayout(jDialogAretes.getContentPane());
+        jDialogAretes.getContentPane().setLayout(jDialogAretesLayout);
+        jDialogAretesLayout.setHorizontalGroup(
+            jDialogAretesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogAretesLayout.createSequentialGroup()
+                .addGap(118, 118, 118)
+                .addGroup(jDialogAretesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogAretesLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jDialogAretesLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jLabel7)))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
-        jDialogArretesLayout.setVerticalGroup(
-            jDialogArretesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialogArretesLayout.createSequentialGroup()
-                .addContainerGap(100, Short.MAX_VALUE)
+        jDialogAretesLayout.setVerticalGroup(
+            jDialogAretesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogAretesLayout.createSequentialGroup()
+                .addContainerGap(68, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addGroup(jDialogAretesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(60, Short.MAX_VALUE))
         );
+
+        jDialogLiens.setPreferredSize(new java.awt.Dimension(500, 500));
 
         jLabel5.setText("Sommet à traiter");
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane5.setViewportView(jList1);
+
+        jButton4.setText("OK");
+        jButton4.setToolTipText("");
+
+        jLabel6.setText("Liens du sommet");
+
+        jScrollPane8.setViewportView(jList2);
 
         javax.swing.GroupLayout jDialogLiensLayout = new javax.swing.GroupLayout(jDialogLiens.getContentPane());
         jDialogLiens.getContentPane().setLayout(jDialogLiensLayout);
         jDialogLiensLayout.setHorizontalGroup(
             jDialogLiensLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialogLiensLayout.createSequentialGroup()
+                .addGap(49, 49, 49)
                 .addGroup(jDialogLiensLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialogLiensLayout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel5))
-                    .addGroup(jDialogLiensLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(271, Short.MAX_VALUE))
+                    .addComponent(jLabel5)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
+                .addGroup(jDialogLiensLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(51, 51, 51))
+            .addGroup(jDialogLiensLayout.createSequentialGroup()
+                .addGap(173, 173, 173)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jDialogLiensLayout.setVerticalGroup(
             jDialogLiensLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jDialogLiensLayout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jLabel5)
+                .addGroup(jDialogLiensLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addGroup(jDialogLiensLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jButton4)
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+
+        jScrollPane10.setViewportView(jList3);
+
+        jLabel9.setText("Arête à choisir");
+
+        jScrollPane11.setViewportView(jList4);
+
+        jLabel10.setText("Liens vers les sommets");
+
+        jButton5.setText("OK");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialogLiensALayout = new javax.swing.GroupLayout(jDialogLiensA.getContentPane());
+        jDialogLiensA.getContentPane().setLayout(jDialogLiensALayout);
+        jDialogLiensALayout.setHorizontalGroup(
+            jDialogLiensALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLiensALayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addGroup(jDialogLiensALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                .addGroup(jDialogLiensALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogLiensALayout.createSequentialGroup()
+                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogLiensALayout.createSequentialGroup()
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26))))
+            .addGroup(jDialogLiensALayout.createSequentialGroup()
+                .addGap(167, 167, 167)
+                .addComponent(jButton5)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jDialogLiensALayout.setVerticalGroup(
+            jDialogLiensALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLiensALayout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jDialogLiensALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addGap(18, 18, 18)
+                .addGroup(jDialogLiensALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addComponent(jButton5)
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
+        jLabel11.setText("Sommet à choisir");
+
+        jScrollPane12.setViewportView(jList5);
+
+        jLabel12.setText("Sommet voisin");
+
+        jScrollPane13.setViewportView(jList6);
+
+        jButton6.setText("OK");
+
+        javax.swing.GroupLayout jDialogVoisinsDLayout = new javax.swing.GroupLayout(jDialogVoisinsD.getContentPane());
+        jDialogVoisinsD.getContentPane().setLayout(jDialogVoisinsDLayout);
+        jDialogVoisinsDLayout.setHorizontalGroup(
+            jDialogVoisinsDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogVoisinsDLayout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
+                .addGroup(jDialogVoisinsDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12)
+                    .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogVoisinsDLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(173, 173, 173))
+            .addGroup(jDialogVoisinsDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDialogVoisinsDLayout.createSequentialGroup()
+                    .addGap(67, 67, 67)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addGap(253, 253, 253)))
+        );
+        jDialogVoisinsDLayout.setVerticalGroup(
+            jDialogVoisinsDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogVoisinsDLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jDialogVoisinsDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12))
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton6)
+                .addContainerGap(70, Short.MAX_VALUE))
+            .addGroup(jDialogVoisinsDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDialogVoisinsDLayout.createSequentialGroup()
+                    .addGap(53, 53, 53)
+                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(97, Short.MAX_VALUE)))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -262,12 +426,6 @@ public class Interface extends javax.swing.JFrame {
 
         jDialog.setText("Affichage");
 
-        jMenuItemVoisinsDirects.setText("Voisins directs");
-        jDialog.add(jMenuItemVoisinsDirects);
-
-        jMenuItemLiensArete.setText("Liens arête");
-        jDialog.add(jMenuItemLiensArete);
-
         jMenuItemListeSommets.setText("Liste sommets");
         jMenuItemListeSommets.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,6 +445,31 @@ public class Interface extends javax.swing.JFrame {
         jMenuBarOptions.add(jDialog);
 
         jMenuFiltres.setText("Filtres");
+
+        jMenuItemLiensSommet.setText("Liens sommet");
+        jMenuItemLiensSommet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemLiensSommetActionPerformed(evt);
+            }
+        });
+        jMenuFiltres.add(jMenuItemLiensSommet);
+
+        jMenuItemLiensArete.setText("Liens arête");
+        jMenuItemLiensArete.setToolTipText("");
+        jMenuItemLiensArete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemLiensAreteActionPerformed(evt);
+            }
+        });
+        jMenuFiltres.add(jMenuItemLiensArete);
+
+        jMenuItemVoisinsDirects.setText("Voisins directs");
+        jMenuItemVoisinsDirects.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemVoisinsDirectsActionPerformed(evt);
+            }
+        });
+        jMenuFiltres.add(jMenuItemVoisinsDirects);
 
         jMenuItemCriteres.setText("Critères");
         jMenuFiltres.add(jMenuItemCriteres);
@@ -321,11 +504,39 @@ public class Interface extends javax.swing.JFrame {
 
     private void jMenuItemListeAretesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListeAretesActionPerformed
         // TODO add your handling code here:
-        jDialogListe.setSize(400,300);
-        jDialogListe.setVisible(true);
-        jDialogListe.setLocationRelativeTo(null);
+        jDialogAretes.setSize(400,300);
+        jDialogAretes.setVisible(true);
+        jDialogAretes.setLocationRelativeTo(null);
         jTextAreaListe.setText(g.getListeAretes().toString());
     }//GEN-LAST:event_jMenuItemListeAretesActionPerformed
+
+    private void jMenuItemLiensSommetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLiensSommetActionPerformed
+        // TODO add your handling code here:
+        jDialogLiens.setSize(400,300);
+        jDialogLiens.setVisible(true);
+        jDialogLiens.setLocationRelativeTo(null);
+        //jTextAreaListe.setText(g..toString());
+    }//GEN-LAST:event_jMenuItemLiensSommetActionPerformed
+
+    private void jMenuItemLiensAreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemLiensAreteActionPerformed
+        // TODO add your handling code here:
+        jDialogLiensA.setSize(400,300);
+        jDialogLiensA.setVisible(true);
+        jDialogLiensA.setLocationRelativeTo(null);
+        //jTextAreaListe.setText(g..toString());
+    }//GEN-LAST:event_jMenuItemLiensAreteActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jMenuItemVoisinsDirectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVoisinsDirectsActionPerformed
+        // TODO add your handling code here:
+        jDialogVoisinsD.setSize(400,300);
+        jDialogVoisinsD.setVisible(true);
+        jDialogVoisinsD.setLocationRelativeTo(null);
+        //jTextAreaListe.setText(g..toString());
+    }//GEN-LAST:event_jMenuItemVoisinsDirectsActionPerformed
 
 
     /**
@@ -367,16 +578,33 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JMenu jDialog;
-    private javax.swing.JDialog jDialogArretes;
+    private javax.swing.JDialog jDialogAretes;
     private javax.swing.JDialog jDialogLiens;
+    private javax.swing.JDialog jDialogLiensA;
     private javax.swing.JDialog jDialogListe;
+    private javax.swing.JDialog jDialogVoisinsD;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList3;
+    private javax.swing.JList<String> jList4;
+    private javax.swing.JList<String> jList5;
+    private javax.swing.JList<String> jList6;
     private javax.swing.JMenuBar jMenuBarOptions;
     private javax.swing.JMenu jMenuFichier;
     private javax.swing.JMenu jMenuFiltres;
@@ -384,6 +612,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemCriteres;
     private javax.swing.JMenuItem jMenuItemFiabilité;
     private javax.swing.JMenuItem jMenuItemLiensArete;
+    private javax.swing.JMenuItem jMenuItemLiensSommet;
     private javax.swing.JMenuItem jMenuItemListeAretes;
     private javax.swing.JMenuItem jMenuItemListeSommets;
     private javax.swing.JMenuItem jMenuItemModifier;
@@ -392,17 +621,24 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTextArea jTextAreaListe;
     private javax.swing.JTextArea jTextAreaListe1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
     private javax.swing.JTextPane jTextPane3;
     private javax.swing.JTextPane jTextPane4;
+    private javax.swing.JTextPane jTextPane5;
     // End of variables declaration//GEN-END:variables
 }
