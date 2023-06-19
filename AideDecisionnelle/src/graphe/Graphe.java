@@ -31,8 +31,8 @@ public class Graphe {
         listeSommets.add(s);
     }
     
-    public void ajouterArete(Sommet s1, Sommet s2, String nom, int f, int di, int du) {
-        Arete a = new Arete(s1, s2, nom, f, di, du);
+    public void ajouterArete(String nom, int f, int di, int du) {
+        Arete a = new Arete(nom, f, di, du);
         listeAretes.add(a);
     }
 }

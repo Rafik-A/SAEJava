@@ -20,6 +20,13 @@ public class Arete {
         this.distance = distance;
         this.duree = duree;
     }
+    
+    public Arete(String nomArete, int fiabilite, int distance, int duree) {
+        this.nomArete = nomArete;
+        this.fiabilite = fiabilite;
+        this.distance = distance;
+        this.duree = duree;
+    }
 
     // getters et setters
     public Sommet getSommet1() {
@@ -62,6 +69,10 @@ public class Arete {
         this.duree = duree;
     }
 
+    @Override
+    public String toString() {
+        return "L'arête " + nomArete + " qui relie les sommets " + sommet1 + " et " + sommet2 + " a une fiabilité de " + fiabilite*10 + "%, une distance de " + distance + "km, pour une durée de " + duree + " minutes.";
+    }
     // méthodes
     
 }

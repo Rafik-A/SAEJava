@@ -25,22 +25,28 @@ public class Chargement {
             if(reponse == JFileChooser.APPROVE_OPTION) {
                 String fichier = dossier.getSelectedFile().toString();
                 try(BufferedReader br = new BufferedReader(new FileReader(fichier))) {
-                    String ligne;
-                    String lignes[] = fichier.split("\n");
-                    
+                    String ligne;              
                     while((ligne = br.readLine()) != null) {
+                        String lignes[] = ligne.split("\n");
                         if(ligne.startsWith("/")) {
                             continue;
                         } else {
-                            String infoArete;
                             String[] infos = ligne.split(";");
                             g.ajouterSommet(infos[0], TypeSommet.valueOf(infos[1]));
-                            
                             for(int i = 2; i < lignes.length; i++) {
+                                System.out.println("test1");
+                                if(infos[i].equals("0")) {
+                                    System.out.println("test2");
+                                    continue;
+                                } else {
+                                    String[] infoSup = infos[i].split(","); 
+                                    g.ajouterArete("a" + (i-1), Integer.parseInt(infoSup[0].trim()), Integer.parseInt(infoSup[1].trim()), Integer.parseInt(infoSup[2].trim()));
+                                    System.out.println(g.getListeAretes().get(i-2));
+                                    
+                                }
                                 
                             }
-                            //System.out.println(s.toString());
-                            //System.out.println(ligne);
+                            System.out.println(ligne);
                         }
                     }
                 } catch (IOException e) {
