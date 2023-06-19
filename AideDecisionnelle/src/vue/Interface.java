@@ -4,6 +4,9 @@
  */
 package vue;
 
+import graphe.*;
+import static graphe.Chargement.g;
+
 /**
  *
  * @author rafik
@@ -45,6 +48,11 @@ public class Interface extends javax.swing.JFrame {
         jMenuFichier.setText("Fichier");
 
         jMenuItemOuvrir.setText("Ouvrir");
+        jMenuItemOuvrir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemOuvrirActionPerformed(evt);
+            }
+        });
         jMenuFichier.add(jMenuItemOuvrir);
 
         jMenuItemModifier.setText("Modifier");
@@ -80,6 +88,11 @@ public class Interface extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemOuvrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOuvrirActionPerformed
+        // TODO add your handling code here:
+        Chargement.ouverture();
+    }//GEN-LAST:event_jMenuItemOuvrirActionPerformed
 
     /**
      * @param args the command line arguments

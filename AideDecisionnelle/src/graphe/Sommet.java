@@ -35,6 +35,11 @@ public class Sommet {
     public void setTypeSommet(TypeSommet type) {
         this.typeSommet = type;
     }
+    
+    @Override
+    public String toString() {
+        return "Sommet " + this.nomSommet + " de type " + this.typeSommet;
+    }
 
     // méthodes
     public void initialiserSommetAdjacent(Graphe g) {

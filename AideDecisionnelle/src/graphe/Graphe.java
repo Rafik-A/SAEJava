@@ -12,10 +12,10 @@ public class Graphe {
     public HashMap<String, Sommet> hashMapSommets;
 
     public Graphe() {
-        ArrayList<Arete> listeAretes = new ArrayList<Arete>();
-        ArrayList<Sommet> listeSommets = new ArrayList<Sommet>();
-        HashMap<String, Arete> hashMapAretes = new HashMap<String, Arete>();
-        HashMap<String, Sommet> hashMapSommets = new HashMap<String, Sommet>();
+        listeAretes = new ArrayList<Arete>();
+        listeSommets = new ArrayList<Sommet>();
+        hashMapAretes = new HashMap<String, Arete>();
+        hashMapSommets = new HashMap<String, Sommet>();
     }
 
     public ArrayList<Arete> getListeAretes() {
@@ -25,9 +25,14 @@ public class Graphe {
     public ArrayList<Sommet> getListeSommets() {
         return listeSommets;
     }
-
+    
     public void ajouterSommet(String nom, TypeSommet type) {
         Sommet s = new Sommet(nom, type);
         listeSommets.add(s);
+    }
+    
+    public void ajouterArete(Sommet s1, Sommet s2, String nom, int f, int di, int du) {
+        Arete a = new Arete(s1, s2, nom, f, di, du);
+        listeAretes.add(a);
     }
 }
