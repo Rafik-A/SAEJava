@@ -26,20 +26,59 @@ public class Interface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jMenuBarOptions = new javax.swing.JMenuBar();
+        jMenuFichier = new javax.swing.JMenu();
+        jMenuItemOuvrir = new javax.swing.JMenuItem();
+        jMenuItemModifier = new javax.swing.JMenuItem();
+        jMenuAffichage = new javax.swing.JMenu();
+        jMenuItemVoisinsDirects = new javax.swing.JMenuItem();
+        jMenuItemLiensArete = new javax.swing.JMenuItem();
+        jMenuFiltres = new javax.swing.JMenu();
+        jMenuItemCriteres = new javax.swing.JMenuItem();
+        jMenuItemFiabilité = new javax.swing.JMenuItem();
+        jMenuItemCheminCourt = new javax.swing.JMenuItem();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Interface d'aide à la décision");
+        setPreferredSize(new java.awt.Dimension(700, 450));
+
+        jMenuFichier.setText("Fichier");
+
+        jMenuItemOuvrir.setText("Ouvrir");
+        jMenuFichier.add(jMenuItemOuvrir);
+
+        jMenuItemModifier.setText("Modifier");
+        jMenuFichier.add(jMenuItemModifier);
+
+        jMenuBarOptions.add(jMenuFichier);
+
+        jMenuAffichage.setText("Affichage");
+
+        jMenuItemVoisinsDirects.setText("Voisins directs");
+        jMenuAffichage.add(jMenuItemVoisinsDirects);
+
+        jMenuItemLiensArete.setText("Liens arête");
+        jMenuAffichage.add(jMenuItemLiensArete);
+
+        jMenuBarOptions.add(jMenuAffichage);
+
+        jMenuFiltres.setText("Filtres");
+
+        jMenuItemCriteres.setText("Critères");
+        jMenuFiltres.add(jMenuItemCriteres);
+
+        jMenuItemFiabilité.setText("Fiabilité");
+        jMenuFiltres.add(jMenuItemFiabilité);
+
+        jMenuItemCheminCourt.setText("Chemin le plus court");
+        jMenuFiltres.add(jMenuItemCheminCourt);
+
+        jMenuBarOptions.add(jMenuFiltres);
+
+        setJMenuBar(jMenuBarOptions);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -78,5 +117,16 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenuAffichage;
+    private javax.swing.JMenuBar jMenuBarOptions;
+    private javax.swing.JMenu jMenuFichier;
+    private javax.swing.JMenu jMenuFiltres;
+    private javax.swing.JMenuItem jMenuItemCheminCourt;
+    private javax.swing.JMenuItem jMenuItemCriteres;
+    private javax.swing.JMenuItem jMenuItemFiabilité;
+    private javax.swing.JMenuItem jMenuItemLiensArete;
+    private javax.swing.JMenuItem jMenuItemModifier;
+    private javax.swing.JMenuItem jMenuItemOuvrir;
+    private javax.swing.JMenuItem jMenuItemVoisinsDirects;
     // End of variables declaration//GEN-END:variables
 }
