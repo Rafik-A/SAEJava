@@ -38,7 +38,7 @@ public class Sommet {
     
     @Override
     public String toString() {
-        return "Sommet " + this.nomSommet + " de type " + this.typeSommet;
+        return "Sommet " + this.nomSommet + " de type " + this.typeSommet + "\n";
     }
 
     // méthodes
